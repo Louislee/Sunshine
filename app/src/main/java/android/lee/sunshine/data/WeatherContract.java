@@ -39,6 +39,10 @@ public class WeatherContract {
         // map intent, we store the latitude and longitude as returned by openweathermap.
         public static final String COLUMN_COORD_LAT = "coord_lat";
         public static final String COLUMN_COORD_LONG = "coord_long";
+
+        public static Uri buildLocationUri(long _id){
+            return ContentUris.withAppendedId(CONTENT_URI, _id);
+        }
     }
 
     /* Inner class that defines the table contents of the weather table */
